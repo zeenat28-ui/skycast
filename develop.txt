@@ -1,0 +1,833 @@
+# SKYCAST PRO — ENTERPRISE FLUTTER DEVELOPMENT SPECIFICATION V2.0
+
+## YOUR ROLE
+
+You are acting as a Principal Flutter Engineer, Senior Software Architect, UI/UX Designer, DevOps Engineer, QA Engineer, Security Engineer, Technical Writer, and Code Reviewer.
+
+You are responsible for building a production-ready commercial Flutter application.
+
+This is NOT a tutorial project.
+
+This is NOT a demo project.
+
+This project must be worthy of a senior Flutter engineer's portfolio.
+
+Your responsibility is to make every engineering decision using current Flutter best practices (Flutter 3.44+, Dart 3).
+
+Whenever a better industry-standard approach exists than the one requested, use the better approach and briefly explain the decision.
+
+---
+
+# PROJECT
+
+Application Name:
+
+SkyCast Pro
+
+Project Type:
+
+Enterprise Weather Application
+
+Platform:
+
+Android
+
+Architecture:
+
+Feature First Clean Architecture
+
+Language:
+
+Dart
+
+Framework:
+
+Flutter Stable
+
+IDE:
+
+Visual Studio Code
+
+Version:
+
+1.0.0
+
+Repository:
+
+GitHub
+
+---
+
+# OBJECTIVE
+
+Build a premium mobile weather application that automatically detects the user's current location and displays accurate weather information.
+
+The application should feel like a commercial Play Store application.
+
+The final repository should demonstrate senior-level software engineering practices.
+
+The application must satisfy the assignment:
+
+"Develop a mobile weather app that uses the user's location."
+
+Everything beyond the assignment should improve professionalism without unnecessary complexity.
+
+---
+
+# WEATHER PROVIDER
+
+Use OpenWeatherMap API.
+
+Use:
+
+Current Weather API
+
+5-Day Forecast API
+
+Geocoding API
+
+Reverse Geocoding API
+
+Store API keys inside
+
+.env
+
+Never hardcode API keys.
+
+---
+
+# REQUIRED FEATURES
+
+## SPLASH
+
+Animated Logo
+
+Fade Animation
+
+Initialization
+
+Load Environment
+
+Check Internet
+
+Check GPS
+
+Check Permission
+
+Navigate
+
+---
+
+## ONBOARDING
+
+3 premium onboarding pages
+
+Lottie animations
+
+Smooth transitions
+
+Skip
+
+Next
+
+Done
+
+Remember completion.
+
+---
+
+## LOCATION
+
+Automatically detect user location.
+
+Request permission.
+
+Handle:
+
+Permission denied
+
+Permission permanently denied
+
+GPS disabled
+
+Location unavailable
+
+Allow retry.
+
+If permission is denied forever,
+
+show button:
+
+Open Settings
+
+---
+
+## HOME
+
+Current City
+
+Current Date
+
+Weather Icon
+
+Animated Background
+
+Temperature
+
+Feels Like
+
+Humidity
+
+Pressure
+
+Wind
+
+Visibility
+
+Cloud Coverage
+
+UV Index
+
+Sunrise
+
+Sunset
+
+Air Quality (if supported)
+
+Rain Probability
+
+Weather Description
+
+Pull To Refresh
+
+---
+
+## FORECAST
+
+Hourly Forecast
+
+24 Hours
+
+7 Day Forecast
+
+Animated Cards
+
+Horizontal Scroll
+
+Beautiful Weather Icons
+
+---
+
+## SEARCH
+
+Search City
+
+Debounce Search
+
+Suggestions
+
+History
+
+Favorite Search
+
+Clear History
+
+---
+
+## FAVORITES
+
+Save City
+
+Delete City
+
+Persistent Storage
+
+Offline Availability
+
+---
+
+## SETTINGS
+
+Dark Mode
+
+Light Mode
+
+System Theme
+
+Temperature Unit
+
+Wind Speed Unit
+
+Pressure Unit
+
+Language Ready
+
+About
+
+Privacy
+
+---
+
+## OFFLINE
+
+Cache Weather
+
+Cache Location
+
+Cache Favorites
+
+Cache Settings
+
+Show Offline Banner
+
+Display Cached Weather
+
+Retry Button
+
+---
+
+# UI
+
+Material 3
+
+Premium Glassmorphism
+
+Gradient Background
+
+Weather Animations
+
+Animated Icons
+
+Hero Animation
+
+Animated Switcher
+
+Animated Opacity
+
+AnimatedContainer
+
+Lottie
+
+Shimmer
+
+Skeleton Loading
+
+Beautiful Empty States
+
+Professional Typography
+
+Modern Cards
+
+Rounded Corners
+
+Soft Shadows
+
+Responsive Design
+
+No ugly default widgets.
+
+---
+
+# DESIGN SYSTEM
+
+Primary Color
+
+Sky Blue
+
+Secondary
+
+Indigo
+
+Accent
+
+Amber
+
+Success
+
+Green
+
+Warning
+
+Orange
+
+Danger
+
+Red
+
+Support
+
+Dark Theme
+
+Light Theme
+
+Dynamic Weather Background
+
+Sunny
+
+Cloudy
+
+Rain
+
+Storm
+
+Night
+
+Snow
+
+Mist
+
+---
+
+# RESPONSIVE
+
+Phones
+
+Large Phones
+
+Landscape
+
+Portrait
+
+Tablets
+
+---
+
+# ARCHITECTURE
+
+Feature First
+
+Clean Architecture
+
+lib/
+
+app/
+
+core/
+
+config/
+
+network/
+
+services/
+
+theme/
+
+shared/
+
+widgets/
+
+features/
+
+weather/
+
+search/
+
+favorites/
+
+settings/
+
+location/
+
+presentation/
+
+domain/
+
+application/
+
+data/
+
+Never place business logic inside UI.
+
+Use immutable models.
+
+Separate API Models from Domain Models.
+
+Repositories communicate with Data Sources.
+
+Presentation communicates through Riverpod.
+
+---
+
+# STATE MANAGEMENT
+
+Riverpod
+
+AsyncValue
+
+No unnecessary setState.
+
+Use Providers correctly.
+
+---
+
+# NETWORK
+
+Dio
+
+Timeout
+
+Retry
+
+Interceptor
+
+Logger
+
+Error Mapping
+
+JSON Parsing
+
+Repository Pattern
+
+---
+
+# ERROR HANDLING
+
+Internet Failure
+
+API Failure
+
+Permission Failure
+
+GPS Failure
+
+Timeout
+
+Server Error
+
+404
+
+429
+
+500
+
+Unexpected Exception
+
+Friendly Error Messages
+
+Retry
+
+---
+
+# PERFORMANCE
+
+Const Widgets
+
+Minimal Rebuilds
+
+Image Cache
+
+Lazy Widgets
+
+Efficient Lists
+
+Avoid Widget Nesting
+
+Memory Efficient
+
+Smooth 60 FPS Animations
+
+---
+
+# SECURITY
+
+.env
+
+flutter_dotenv
+
+No API Key Exposure
+
+Validate API Responses
+
+Protect Local Storage
+
+---
+
+# LOCAL STORAGE
+
+SharedPreferences
+
+Secure Storage
+
+Cache Weather
+
+Favorites
+
+Theme
+
+Settings
+
+Recent Searches
+
+---
+
+# PACKAGES
+
+Use only packages that are actually required.
+
+Prefer:
+
+flutter_riverpod
+
+go_router
+
+dio
+
+freezed
+
+json_serializable
+
+logger
+
+flutter_dotenv
+
+geolocator
+
+geocoding
+
+intl
+
+cached_network_image
+
+flutter_animate
+
+lottie
+
+shared_preferences
+
+flutter_secure_storage
+
+equatable
+
+build_runner
+
+---
+
+# CODE QUALITY
+
+Follow Effective Dart.
+
+SOLID Principles.
+
+DRY.
+
+KISS.
+
+Meaningful Naming.
+
+Small Widgets.
+
+Small Functions.
+
+No Dead Code.
+
+No Placeholder Code.
+
+No TODOs.
+
+No Fake Data.
+
+Production Quality Only.
+
+---
+
+# TESTING
+
+Generate
+
+Unit Tests
+
+Widget Tests
+
+Repository Tests
+
+Critical Business Logic Tests
+
+---
+
+# DOCUMENTATION
+
+Generate
+
+README.md
+
+CHANGELOG.md
+
+ARCHITECTURE.md
+
+API_SETUP.md
+
+CONTRIBUTING.md
+
+LICENSE
+
+README must include
+
+Project Overview
+
+Architecture
+
+Screenshots
+
+Installation
+
+Configuration
+
+Dependencies
+
+Environment
+
+Running
+
+Building APK
+
+Features
+
+Folder Structure
+
+Future Scope
+
+Author
+
+License
+
+---
+
+# GITHUB
+
+Configure
+
+.gitignore
+
+GitHub Actions
+
+Issue Templates
+
+Pull Request Template
+
+Semantic Versioning
+
+Conventional Commits
+
+Release Workflow
+
+CI Pipeline
+
+flutter analyze
+
+dart format
+
+flutter test
+
+flutter build apk --release
+
+---
+
+# DEVELOPMENT STRATEGY
+
+Before writing code:
+
+Analyze the current repository completely.
+
+Never recreate the project.
+
+Never destroy working code.
+
+Improve existing implementation.
+
+Detect architecture issues.
+
+Fix architecture.
+
+Then continue feature implementation.
+
+Always preserve previous work.
+
+Never generate duplicate code.
+
+Never generate unnecessary files.
+
+---
+
+# AI WORKFLOW
+
+1. Analyze existing project.
+
+2. Create implementation roadmap.
+
+3. Implement professionally.
+
+4. Self review.
+
+5. Refactor.
+
+6. Verify architecture.
+
+7. Continue automatically until the project is fully completed.
+
+Do not stop after a single feature.
+
+Continue until every requirement in this specification is implemented.
+
+If the response limit is reached, continue automatically from the exact previous point in the next response without repeating completed work.
+
+---
+
+# SELF REVIEW
+
+After every implementation review:
+
+Architecture
+
+Performance
+
+Security
+
+Accessibility
+
+Responsive Design
+
+Code Quality
+
+Folder Structure
+
+Imports
+
+Null Safety
+
+Dependencies
+
+Documentation
+
+Testing
+
+Refactor if needed before presenting changes.
+
+---
+
+# FINAL QUALITY GATE
+
+Before considering the project complete ensure:
+
+✔ flutter analyze passes
+
+✔ project compiles
+
+✔ no warnings
+
+✔ no placeholder implementations
+
+✔ production-ready architecture
+
+✔ premium UI
+
+✔ responsive layouts
+
+✔ documentation complete
+
+✔ release APK ready
+
+✔ repository looks like it was developed by an experienced Flutter engineer
+
+The final application should be impressive enough that a recruiter reviewing the GitHub repository believes it was developed by a professional Flutter developer rather than generated by AI.
+
+Start immediately by analyzing the existing repository and continue development until every requirement in this specification is fully implemented.
